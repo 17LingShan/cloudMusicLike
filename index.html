@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cloudMusicLike</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <section id="app">
+        <header class="appHeader">
+            <h1 class="logo">悦听</h1>
+            <h1 class="musicName">正在播放:<span v-show="singer">{{singer}}-{{songName}}</span></h1>
+            <div class="search_bar">
+                <input type="text" placeholder="搜索" @keyup.enter="searchMusic" v-model="searcher">
+                <div class="searchBtn" @click="searchMusic">
+                    <img src="images/zoom.png">
+                </div>
+            </div>
+        </header>
+        <main class="appMain">
+            <div class="musicList">
+                <ul>
+                    <li v-for="(item, index) in musicList" :class="{musicListOn:!(index%2), musicListOff:index%2}">
+                        <img src="images/play.png" @click="playMusic(item.id, index)">
+                        <span>{{item.artists[0].name}}-{{item.name}}</span>
+                        <div class="mv_con" v-show="item.mvid" @click="mvPlay(item.mvid)"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wire"></div>
+            <div class="musicAnimation" :class="{playing:isPlay}">
+                <img src="images/player_bar.png" class="musicHandle">
+                <img src="images/disc.png" class="musicDisc autoRotate">
+                <img :src="songPic==''?' images/cover.png':songPic" class="cover autoRotate">
+                <div class="play_bar">
+                    <i class="fa fa-step-backward" @click="prevSong"></i>
+                    <i class="	fa fa-play" @click="isPlay ? musicPaused() : musicPlay()"></i>
+                    <i class="fa fa-step-forward" @click="nextSong"></i>
+                </div>
+            </div>
+            <div class="wire"></div>
+            <div class="musicReview">
+
+            </div>
+        </main>
+        <footer class="appFooter">
+            <audio ref="audio" @play="musicPlay" @pause="musicPaused" :src="songUrl" controls autoplay loop
+                class="myaudio"></audio>
+        </footer>
+        <!-- mv -->
+        <div class="video_con" v-show="showMv">
+            <video ref="video" :src="mvUrl" controls autoplay></video>
+            <div class="mask" @click="closeMv">
+            </div>
+        </div>
+    </section>
+    <script src="js/axios.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

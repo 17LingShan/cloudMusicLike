@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    border: none;
+}
+
+
+
+#app {
+    width: 1200px;
+    height: 700px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+/*header*/
+.appHeader {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background-color: #11a1de;
+}
+
+.logo {
+    float: left;
+    margin-left: 20px;
+    line-height: 100px;
+    color: #e6fbfe;
+    cursor: pointer;
+}
+
+.musicName {
+    float: left;
+    width: 400px;
+    height: 100px;
+    margin-left: 150px;
+    line-height: 100px;
+    overflow: hidden;
+    color: #e6fbfe;
+    cursor: pointer;
+
+}
+
+.musicName span {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+
+.search_bar {
+    float: right;
+    margin-right: 100px;
+    line-height: 100px;
+    line-height: 100px;
+    font-size: 0;
+}
+
+.search_bar input {
+    width: 320px;
+    height: 30px;
+    vertical-align: middle;
+    padding: 6px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: #7ccbed;
+
+}
+
+.searchBtn {
+    display: inline-block;
+    width: 30px;
+    height: 41px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    vertical-align: middle;
+    background-color: #7ccbed;
+    cursor: pointer;
+}
+
+.searchBtn img {
+    display: inline-block;
+    vertical-align: 18px;
+    width: 20px;
+    height: 20px;
+}
+
+/* .search_bar button {
+    width: 50px;
+    height: 42px;
+    vertical-align: middle;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: #7ccbed;
+    color: #9ba1a0;
+    color: #ff5b00;
+
+} */
+
+/*header*/
+
+/*main*/
+.appMain {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to top right, #e1cfb1, #e7caaa, #a1c0cf);
+}
+
+/*main左边开始*/
+.musicList {
+    float: left;
+    width: 300px;
+    height: 480px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.musicList ul li {
+    height: 50px;
+    line-height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.musicList ul li img {
+    width: 25px;
+    height: 25px;
+    vertical-align: sub;
+}
+
+.musicList ul li span {
+    display: inline-flex;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.mv_con {
+    float: right;
+    width: 25px;
+    height: 25px;
+    background: url("../images/table.png") no-repeat -30px -48px;
+}
+
+.musicList::-webkit-scrollbar {
+    display: none;
+}
+
+.musicListOn {
+    /* 奇数 */
+    background-color: #ecd7c2;
+}
+
+.musicListOff {
+    background-color: none;
+}
+
+/*main左边结束*/
+
+/*main中间开始*/
+
+.musicAnimation {
+    position: relative;
+    float: left;
+    width: 600px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.play_bar {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.play_bar .fa {
+    font-size: 50px;
+}
+
+.play_bar .fa:hover {
+    color: #ef6767;
+}
+
+.play_bar .fa-play {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.musicHandle {
+    position: absolute;
+    left: 48%;
+    top: -12px;
+    width: 92px;
+    height: 128px;
+    z-index: 10;
+    transform: rotate(-35deg);
+    transform-origin: 12px 12px;
+    transition: 1s;
+}
+
+.cover {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 46%;
+    left: 57%;
+    margin-left: -127px;
+    margin-top: -122px;
+    border-radius: 75px;
+
+}
+
+.musicDisc {
+    position: absolute;
+    width: 254px;
+    height: 255px;
+    top: 36%;
+    left: 48%;
+    margin-left: -127px;
+    margin-top: -122px;
+    z-index: 9;
+}
+
+/*disc旋转360度*/
+@keyframes Rotate {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.musicAnimation.playing .musicHandle {
+    transform: rotate(0);
+}
+
+.autoRotate {
+    animation-name: Rotate;
+    animation-play-state: paused;
+    /* 结束前运行次数 */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+}
+
+.musicAnimation.playing .musicDisc,
+.musicAnimation.playing .cover {
+    animation-play-state: running;
+}
+
+
+
+
+
+
+
+/*main中间结束*/
+
+
+.musicReview {
+    float: right;
+    width: 275px;
+    height: 480px;
+}
+
+.wire {
+    float: left;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(244deg, rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+/*main*/
+/*footer*/
+.appFooter {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+
+.myaudio {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f1f3f4;
+}
+
+.video_con video {
+    position: fixed;
+    width: 800px;
+    height: 546px;
+    left: 50%;
+    top: 50%;
+    margin-top: -273px;
+    transform: translateX(-50%);
+    z-index: 990;
+}
+
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 980;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*footer*/
