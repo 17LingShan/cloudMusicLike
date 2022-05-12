@@ -35,24 +35,12 @@
     float: left;
     width: 500px;
     height: 100px;
-    margin-left: 150px;
+    margin-left: 1px;
     line-height: 100px;
     font-size: 30px;
     overflow: hidden;
     color: #e6fbfe;
     cursor: pointer;
-}
-
-.musicName span {
-    float: left;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-
-.singer_bar {
-    float: left;
-    overflow: hidden;
-    vertical-align: middle;
 }
 
 .autoScroll {
@@ -66,16 +54,12 @@
 @keyframes wordsLoop {
     0% {
         transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
-    }
-
-    50% {
-        transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
+        -webkit-transform: translateX(0px);
     }
 
     100% {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
+        /* -webkit-transform: translateX(-100%); */
     }
 }
 

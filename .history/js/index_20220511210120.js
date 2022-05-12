@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://autumnfish.cn'
 let app = new Vue({
     el: '#app',
     data: {
-        searcher: '相逢何必曾相识',
+        searcher: 'LinKinPark',
         musicList: [],
         singer: '',
         songName: '',
@@ -13,7 +13,8 @@ let app = new Vue({
         songIndex: '',
         isPlay: false,
         showMv: false,
-        mvUrl: ''
+        mvUrl: '',
+        nameScroll: false
     },
 
     methods: {
@@ -51,6 +52,7 @@ let app = new Vue({
                     that.singer = response.data.songs[0].ar[0].name;
                     that.songPic = response.data.songs[0].al.picUrl;
                 })
+            scrollMusicName()
         },
 
         prevSong: function () {
@@ -122,7 +124,14 @@ let app = new Vue({
             this.showMv = false;
             this.mvUrl = ''
         },
-
+        scrollMusicName: function () {
+            let that = this;
+            if (that.$refs.musicName.clientWidth > 2.35 * parseInt(document.querySelector('html').style.fontSize)) {
+                that.nameScroll = true
+            } else {
+                that.nameScroll = false
+            }
+        }
     }
 })
 

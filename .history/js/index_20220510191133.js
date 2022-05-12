@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://autumnfish.cn'
 let app = new Vue({
     el: '#app',
     data: {
-        searcher: '相逢何必曾相识',
+        searcher: 'LinKinPark',
         musicList: [],
         singer: '',
         songName: '',
@@ -121,8 +121,7 @@ let app = new Vue({
         closeMv: function () {
             this.showMv = false;
             this.mvUrl = ''
-        },
-
+        }
     }
 })
 

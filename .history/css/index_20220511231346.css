@@ -60,22 +60,22 @@
     margin-left: 50px;
     font-size: 20px;
     white-space: nowrap;
-    animation: 10s wordsLoop linear infinite normal;
+    animation: 5s wordsLoop linear infinite normal;
 }
 
 @keyframes wordsLoop {
     0% {
         transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
     }
 
     50% {
         transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
+        -webkit-transform: translateX(0px);
     }
 
     100% {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
     }
 }
 

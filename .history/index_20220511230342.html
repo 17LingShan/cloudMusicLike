@@ -14,10 +14,8 @@
     <section id="app">
         <header class="appHeader">
             <h1 class="logo">悦听</h1>
-            <div class="musicName"><span>正在播放:</span>
-                <div class="singer_bar">
-                    <span v-show="singer" class="autoScroll">{{singer}}-{{songName}}</span>
-                </div>
+            <div class="musicName">正在播放:
+                <div v-show="singer" class="autoScroll">{{singer}}-{{songName}}</div>
             </div>
             <div class="search_bar">
                 <input type="text" placeholder="搜索" @keyup.enter="searchMusic" v-model="searcher">

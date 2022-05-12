@@ -13,7 +13,8 @@ let app = new Vue({
         songIndex: '',
         isPlay: false,
         showMv: false,
-        mvUrl: ''
+        mvUrl: '',
+        nameScroll: true
     },
 
     methods: {

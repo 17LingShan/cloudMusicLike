@@ -33,51 +33,21 @@
 
 .musicName {
     float: left;
-    width: 500px;
+    width: 400px;
     height: 100px;
     margin-left: 150px;
     line-height: 100px;
-    font-size: 30px;
     overflow: hidden;
     color: #e6fbfe;
     cursor: pointer;
+
 }
 
 .musicName span {
-    float: left;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-
-.singer_bar {
-    float: left;
-    overflow: hidden;
-    vertical-align: middle;
-}
-
-.autoScroll {
-    display: inline-block;
-    margin-left: 50px;
+    margin-left: 5px;
     font-size: 20px;
-    white-space: nowrap;
-    animation: 10s wordsLoop linear infinite normal;
 }
 
-@keyframes wordsLoop {
-    0% {
-        transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
-    }
-
-    50% {
-        transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
-    }
-
-    100% {
-        transform: translateX(-150%);
-    }
-}
 
 .search_bar {
     float: right;
@@ -93,15 +63,14 @@
     vertical-align: middle;
     padding: 6px;
     font-size: 20px;
-    text-indent: 20px;
-    color: #e6fbfe;
+    color: white;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
     background-color: #e13e3e;
 }
 
 .search_bar input::-webkit-input-placeholder {
-    color: #e6fbfe;
+    color: white;
 }
 
 .searchBtn {
@@ -121,6 +90,18 @@
     width: 20px;
     height: 20px;
 }
+
+/* .search_bar button {
+    width: 50px;
+    height: 42px;
+    vertical-align: middle;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: #7ccbed;
+    color: #9ba1a0;
+    color: #ff5b00;
+
+} */
 
 /*header*/
 
@@ -279,6 +260,11 @@
 .musicAnimation.playing .cover {
     animation-play-state: running;
 }
+
+
+
+
+
 
 
 /*main中间结束*/

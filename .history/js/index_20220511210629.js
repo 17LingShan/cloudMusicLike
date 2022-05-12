@@ -13,7 +13,8 @@ let app = new Vue({
         songIndex: '',
         isPlay: false,
         showMv: false,
-        mvUrl: ''
+        mvUrl: '',
+        nameScroll: true
     },
 
     methods: {
@@ -51,6 +52,7 @@ let app = new Vue({
                     that.singer = response.data.songs[0].ar[0].name;
                     that.songPic = response.data.songs[0].al.picUrl;
                 })
+            // this.scrollMusicName()
         },
 
         prevSong: function () {
@@ -122,7 +124,13 @@ let app = new Vue({
             this.showMv = false;
             this.mvUrl = ''
         },
-
+        scrollMusicName: function () {
+            if (this.$refs.musicName.clientWidth > 300 * parseInt(document.querySelector('html').style.fontSize)) {
+                this.nameScroll = true
+            } else {
+                this.nameScroll = false
+            }
+        }
     }
 })
 

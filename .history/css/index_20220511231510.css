@@ -66,12 +66,12 @@
 @keyframes wordsLoop {
     0% {
         transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
+        -webkit-transform: translateX(0px);
     }
 
     50% {
         transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
+        -webkit-transform: translateX(0px);
     }
 
     100% {

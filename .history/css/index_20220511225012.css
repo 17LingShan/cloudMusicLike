@@ -37,27 +37,14 @@
     height: 100px;
     margin-left: 150px;
     line-height: 100px;
-    font-size: 30px;
     overflow: hidden;
     color: #e6fbfe;
     cursor: pointer;
 }
 
-.musicName span {
-    float: left;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-
-.singer_bar {
-    float: left;
-    overflow: hidden;
-    vertical-align: middle;
-}
-
 .autoScroll {
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 5px;
     font-size: 20px;
     white-space: nowrap;
     animation: 10s wordsLoop linear infinite normal;
@@ -65,17 +52,13 @@
 
 @keyframes wordsLoop {
     0% {
-        transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
-    }
-
-    50% {
-        transform: translateX(0px);
-        /* -webkit-transform: translateX(0px); */
+        transform: translateX(100px);
+        -webkit-transform: translateX(100px);
     }
 
     100% {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
+        /* -webkit-transform: translateX(-100%); */
     }
 }
 
@@ -121,6 +104,18 @@
     width: 20px;
     height: 20px;
 }
+
+/* .search_bar button {
+    width: 50px;
+    height: 42px;
+    vertical-align: middle;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: #7ccbed;
+    color: #9ba1a0;
+    color: #ff5b00;
+
+} */
 
 /*header*/
 
