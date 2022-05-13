@@ -60,7 +60,7 @@
     margin-left: 50px;
     font-size: 20px;
     white-space: nowrap;
-    animation: 10s wordsLoop linear infinite;
+    animation: 10s wordsLoop ease-in infinite normal;
 }
 
 @keyframes wordsLoop {
@@ -69,16 +69,16 @@
         /* -webkit-transform: translateX(0px); */
     }
 
-    40% {
+    25% {
         transform: translateX(0%);
         /* -webkit-transform: translateX(0px); */
     }
 
-    70% {
+    50% {
         transform: translateX(-150%);
     }
 
-    70.1% {
+    75.1% {
         transform: translateX(150%);
     }
 

@@ -60,30 +60,30 @@
     margin-left: 50px;
     font-size: 20px;
     white-space: nowrap;
-    animation: 10s wordsLoop linear infinite;
+    animation: 10s wordsLoop linear infinite normal;
 }
 
 @keyframes wordsLoop {
     0% {
-        transform: translateX(0%);
+        transform: translateX(0px);
         /* -webkit-transform: translateX(0px); */
     }
 
-    40% {
-        transform: translateX(0%);
+    25% {
+        transform: translateX(0px);
         /* -webkit-transform: translateX(0px); */
     }
 
-    70% {
+    75% {
         transform: translateX(-150%);
     }
 
-    70.1% {
-        transform: translateX(150%);
+    76% {
+        transform: translateX(0px);
     }
 
     100% {
-        transform: translateX(0%);
+        transform: translateX(-100%);
 
     }
 }
