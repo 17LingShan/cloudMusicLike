@@ -43,8 +43,7 @@
                 <img :src="songPic==''?' images/cover.png':songPic" class="cover autoRotate">
                 <div class="play_bar">
                     <i class="fa fa-step-backward" @click="prevSong"></i>
-                    <i class="fa" :class="{'fa-play': !isPlay, 'fa-pause': isPlay}"
-                        @click="isPlay ? musicPaused() : musicPlay()"></i>
+                    <i class="fa" :class="{isPlay: fa-play :}" @click="isPlay ? musicPaused() : musicPlay()"></i>
                     <i class="fa fa-step-forward" @click="nextSong"></i>
                 </div>
             </div>

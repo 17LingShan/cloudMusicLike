@@ -112,6 +112,7 @@ let app = new Vue({
                 */
                 that.$nextTick(function () {
                     this.$refs.audio.pause();
+
                 })
                 that.mvUrl = response.data.data.url;
                 console.log(that.mvUrl);
@@ -127,6 +128,7 @@ let app = new Vue({
 
 window.onload = function () {
     app.searchMusic();
+    var au = document.querySelector('audio').volume
 }
 
 

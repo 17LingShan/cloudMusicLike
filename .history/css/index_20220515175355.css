@@ -214,15 +214,13 @@
 
 .play_bar .fa {
     font-size: 50px;
-    cursor: pointer;
 }
 
 .play_bar .fa:hover {
     color: #ef6767;
 }
 
-.fa-play,
-.fa-pause {
+.fa-play {
     margin-left: 50px;
     margin-right: 50px;
 }

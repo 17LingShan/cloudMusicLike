@@ -91,6 +91,7 @@ let app = new Vue({
             this.isPlay = true;
             this.mvUrl = '';
             this.$refs.audio.play();
+            // this.$refs.audio.volume = 0.1
         },
         musicPaused: function () {
             this.isPlay = false;
